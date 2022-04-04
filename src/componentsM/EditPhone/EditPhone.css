@@ -1,0 +1,28 @@
+.edit-container {
+  width: 90vw;
+}
+
+.edit-container-inner {
+  background-image: url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=90&.v=1567022175704");
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: right;
+}
+
+.edit-form {
+  width: 30vw;
+  margin-left: 20px;
+}
+
+.edit-product-name {
+  margin-top: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-container-inner {
+    background-image: none;
+  }
+}
