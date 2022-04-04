@@ -12,6 +12,9 @@ import IphoneList from "../IphoneList/IphoneList";
 import Cart from "../Cart/Cart";
 import Favorite from "../../Favorite/Favorite";
 import Auth from "../Auth/Auth";
+import StripeContainer from "../Payment/StripeContainer";
+import Payment from "../Payment/Payment";
+import PaymentFinish from "../PaymentFinish/PaymentFinish";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -44,6 +47,16 @@ const Routing = () => {
       link: "/auth",
       element: <Auth />,
       id: 6,
+    },
+    {
+      link: "/payment",
+      element: <Payment />,
+      id: 6,
+    },
+    {
+      link: "/paymentfinish",
+      element: <PaymentFinish />,
+      id: 7,
     },
   ];
   let ADMIN_ROUTES = [

@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { phonesContext } from "../contexts/phoneContext";
 import Loading from "../Loading/Loading";
 
 const Details = () => {
   const { getOnePhone, onePhone } = useContext(phonesContext);
   const params = useParams();
+  const navigate = useNavigate();
   const [activeColor, setActiveColor] = useState("white");
   useEffect(() => {
     getOnePhone(params.id);
@@ -105,6 +106,7 @@ const Details = () => {
               marginTop: "20px",
               cursor: "pointer",
             }}
+            onClick={() => navigate("/payment")}
           >
             BUY NOW
           </button>

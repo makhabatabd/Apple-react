@@ -81,12 +81,12 @@ const Navbar = () => {
           ) : null}
         </div>
         <Link to="/cart">
-          <Badge count={+cartLength}>
+          <Badge className="badge" count={+cartLength}>
             <ShoppingOutlined className="shopping" />
           </Badge>
         </Link>
         <Link to="/favorite">
-          <Badge count={+favoriteLength}>
+          <Badge className="badge" count={+favoriteLength}>
             <HeartOutlined className="shopping" />
           </Badge>
         </Link>
@@ -95,7 +95,12 @@ const Navbar = () => {
         {currentUser ? (
           <span>
             {currentUser}
-            <Button onClick={handleLogOut}>Logout</Button>
+            <Button
+              style={{ marginLeft: "8px", marginBottom: "10px" }}
+              onClick={handleLogOut}
+            >
+              Logout
+            </Button>
           </span>
         ) : (
           <Button onClick={() => navigate("/auth")}>Log in/ Sign up</Button>
