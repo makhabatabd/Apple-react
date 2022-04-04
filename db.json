@@ -1,3 +1,94 @@
 {
-  "products": []
+  "products": [
+    {
+      "model": "iPhone SE",
+      "description": "Dimensions\t138.4 x 67.3 x 7.3 mm (5.45 x 2.65 x 0.29 in) Weight\t144 g (5.08 oz) Build\tGlass front, glass back, aluminum frame SIM\tNano-SIM and/or eSIM  \tIP67 dust/water resistant (up to 1m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "price": 650,
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-starlight-select-202203?wid=940&hei=1112&fmt=png-alpha&.v=1646070494844",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-midnight-select-202203?wid=940&hei=1112&fmt=png-alpha&.v=1646070494831",
+      "imagePurple": "https://cdn.shopify.com/s/files/1/0409/7245/products/smviolet_7de341ee-d026-4896-bfe5-2f022ae72842_grande.png?v=1590140533",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-red-select-202203?wid=940&hei=1112&fmt=png-alpha&.v=1646070494834",
+      "id": 3
+    },
+    {
+      "model": "iPhone 13 Pro",
+      "description": "Dimensions\t160.8 x 78.1 x 7.7 mm (6.33 x 3.07 x 0.30 in) Weight\t240 g (8.47 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame SIM\tSingle SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM/eSIM, dual stand-by)  \tIP68 dust/water resistant (up to 6m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "price": 1100,
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-silver-select?wid=940&hei=1112&fmt=png-alpha&.v=1645552346280",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-graphite-select?wid=940&hei=1112&fmt=png-alpha&.v=1645552346288",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-pro-max-blue-select?wid=940&hei=1112&fmt=png-alpha&.v=1645552346295",
+      "imageRed": "https://cdn.shopify.com/s/files/1/0409/7245/products/brred_1800x1800.png?v=1632827839",
+      "id": 4
+    },
+    {
+      "model": "iPhone 13",
+      "description": "Dimensions\t146.7 x 71.5 x 7.7 mm (5.78 x 2.81 x 0.30 in) Weight\t174 g (6.14 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), aluminum frame SIM\tSingle SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by)  \tIP68 dust/water resistant (up to 6m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "price": 800,
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-starlight-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1645572315205",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-midnight-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1645572315913",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-blue-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1645572386470",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-product-red-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1645572315758",
+      "id": 5
+    },
+    {
+      "model": "iPhone 12",
+      "description": "Dimensions\t146.7 x 71.5 x 7.4 mm (5.78 x 2.81 x 0.29 in) Weight\t164 g (5.78 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), aluminum frame SIM\tSingle SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by) - for China  \tIP68 dust/water resistant (up to 6m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "price": 700,
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-white-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343705000",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343702000",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-purple-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1617130317000",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-red-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343703000",
+      "id": 6
+    },
+    {
+      "model": "iPhone X",
+      "price": 650,
+      "description": "Dimensions\t143.6 x 70.9 x 7.7 mm (5.65 x 2.79 x 0.30 in) Weight\t174 g (6.14 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame SIM\tNano-SIM  \tIP67 dust/water resistant (up to 1m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-white-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343707000",
+      "imageBlack": "https://m.media-amazon.com/images/I/51FU6MdiuOS._AC_SY879_.jpg",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-purple-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566960958082",
+      "imageRed": "https://mobilecity-live.s3.ap-southeast-2.amazonaws.com/wp-content/uploads/2021/01/01013557/R02-600x626.jpg",
+      "id": 7
+    },
+    {
+      "model": "iPhone X Max",
+      "price": 750,
+      "description": "Dimensions\t143.6 x 70.9 x 7.7 mm (5.65 x 2.79 x 0.30 in) Weight\t174 g (6.14 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame SIM\tNano-SIM  \tIP67 dust/water resistant (up to 1m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-se-starlight-select-202203?wid=940&hei=1112&fmt=png-alpha&.v=1646070494844",
+      "imageBlack": "https://m.media-amazon.com/images/I/71LVhKIeesL._AC_SX679_.jpg",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MK083?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1617321731000",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHLF3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1601149637000",
+      "id": 8
+    },
+    {
+      "model": "iPhone 12 Pro Max",
+      "price": 980,
+      "description": "Dimensions\t160.8 x 78.1 x 7.4 mm (6.33 x 3.07 x 0.29 in) Weight\t228 g (8.04 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame SIM\tSingle SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by) - for China  \tIP68 dust/water resistant (up to 6m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-white-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343705000",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343702000",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-purple-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1617130317000",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-red-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343703000",
+      "id": 9
+    },
+    {
+      "model": "iPhone 12 Mini",
+      "price": 600,
+      "description": "Dimensions\t131.5 x 64.2 x 7.4 mm (5.18 x 2.53 x 0.29 in) Weight\t135 g (4.76 oz) Build\tGlass front (Gorilla Glass), glass back (Gorilla Glass), aluminum frame SIM\tSingle SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by)  \tIP68 dust/water resistant (up to 6m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-white-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343707000",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-black-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343705000",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-purple-select-2021?wid=940&hei=1112&fmt=png-alpha&.v=1617130317000",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-mini-red-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343707000",
+      "id": 10
+    },
+    {
+      "model": "Phone 11",
+      "price": 650,
+      "description": "Dimension:150.9 x 75.7 x 8.3 mm (5.94 x 2.98 x 0.33 in) Weight:194 g (6.84 oz) Build\\tGlass front (Gorilla Glass), glass back (Gorilla Glass), aluminum frame (7000 series) SIM:Single SIM (Nano-SIM and/or eSIM) or Dual SIM (Nano-SIM, dual stand-by) - for China  \\tIP68 dust/water resistant (up to 2m for 30 mins) Apple Pay (Visa, MasterCard, AMEX certified)",
+      "imageWhite": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-white-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956148115",
+      "imageBlack": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-black-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956144418",
+      "imagePurple": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-purple-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566960958082",
+      "imageRed": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-red-select-2019?wid=940&hei=1112&fmt=png-alpha&.v=1566956144763",
+      "id": 11
+    }
+  ]
 }
