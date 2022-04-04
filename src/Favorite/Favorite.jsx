@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Avatar, Button, List } from "antd";
+import React, { useContext, useEffect } from "react";
+import { Button, List } from "antd";
 import { favoriteContext } from "../componentsM/contexts/favoriteContext";
 
 const Favorite = () => {
@@ -19,11 +19,6 @@ const Favorite = () => {
       dataSource={favorite.products}
       renderItem={(item) => (
         <List.Item style={{ display: "flex", justifyContent: "flex-start" }}>
-          {/* <List.Item.Meta
-            avatar={<img src={item.item.imageWhite} />}
-            title={<p>{item.item.model}</p>}
-            description={item.item.description}
-          /> */}
           <div>
             <img src={item.item.imageWhite} alt="phones" width="150px" />
           </div>
