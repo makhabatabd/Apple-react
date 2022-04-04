@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 
 export const authContext = React.createContext();
 
+export const ADMIN_EMAIL = "makhabat98@gmail.com";
+
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState("");
   const [error, setError] = useState("");

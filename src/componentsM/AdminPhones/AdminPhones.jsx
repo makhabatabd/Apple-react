@@ -22,7 +22,7 @@ const AdminPhones = () => {
               {item.description}
             </span>
             <div style={{ marginRight: "40px", fontSize: "20px" }}>
-              <a onClick={() => deletePhone(item.id)}>Delete</a>
+              <span onClick={() => deletePhone(item.id)}>Delete</span>
               <Link to={`/edit/${item.id}`} style={{ margin: "auto 20px" }}>
                 Edit
               </Link>
