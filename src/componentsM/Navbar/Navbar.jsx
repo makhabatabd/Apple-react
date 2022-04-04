@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import { ShoppingOutlined } from "@ant-design/icons";
+import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { Badge } from "antd";
+import { cartContext } from "../contexts/cartContext";
+import { favoriteContext } from "../contexts/favoriteContext";
 
 const Navbar = () => {
   const Nav_ITEMS = [
@@ -27,6 +30,15 @@ const Navbar = () => {
     },
   ];
   const location = useLocation();
+  const { getCart, cartLength } = useContext(cartContext);
+  const { getFavorite, favoriteLength, favorite } = useContext(favoriteContext);
+  useEffect(() => {
+    getCart();
+  }, []);
+  useEffect(() => {
+    getFavorite();
+  }, []);
+  console.log(favorite);
   return (
     <div className="navbar">
       <div className="logo">
@@ -60,7 +72,16 @@ const Navbar = () => {
           Admin
         </Link>
       </div>
-      <ShoppingOutlined className="shopping" />
+      <Link to="/cart">
+        <Badge count={+cartLength}>
+          <ShoppingOutlined className="shopping" />
+        </Badge>
+      </Link>
+      <Link to="/favorite">
+        <Badge count={+favoriteLength}>
+          <HeartOutlined className="shopping" />
+        </Badge>
+      </Link>
     </div>
   );
 };
