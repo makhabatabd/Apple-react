@@ -6,7 +6,7 @@ const AddPhone = () => {
   const { addPhone } = useContext(phonesContext);
   const [isModalVisible, setIsModalVisible] = useState(false);
   function save(newProduct) {
-    addPhone(newProduct);
+    addPhone({ ...newProduct, comments: [] });
     setIsModalVisible(false);
   }
 
