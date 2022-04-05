@@ -1,14 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { phonesContext } from "../contexts/phoneContext";
 import Loading from "../Loading/Loading";
-import { Button, Form, Input, Modal } from "antd";
+import { Button, Input, Modal } from "antd";
 import { List, Avatar } from "antd";
 import { authContext } from "../contexts/authContext";
+import { LikeOutlined } from "@ant-design/icons";
 const Details = () => {
-  const { getOnePhone, onePhone, updateComments } = useContext(phonesContext);
+  const { getOnePhone, onePhone, updateComments, updateLikes } =
+    useContext(phonesContext);
   const { currentUser } = useContext(authContext);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [createComment, setCreateComment] = useState({
+    comment: "",
+  });
   const params = useParams();
   const navigate = useNavigate();
   const [activeColor, setActiveColor] = useState("white");
@@ -25,10 +30,30 @@ const Details = () => {
       name: currentUser,
       id: Date.now(),
     };
+    if (!createComment) {
+      alert("Fill in");
+      return;
+    }
     let comments = [...onePhone.comments, comment];
     updateComments(params.id, comments);
     setIsModalVisible(false);
-    console.log(comments);
+    setCreateComment("");
+  }
+  function saveLikes(newLike) {
+    let like = {
+      user: currentUser,
+      id: Date.now(),
+    };
+    let userLikes = onePhone.likes.some((item) => item.user === currentUser);
+    if (userLikes) {
+      let filteredLikes = onePhone.likes.filter((item) => {
+        return item.user !== currentUser;
+      });
+      updateLikes(params.id, filteredLikes);
+    } else {
+      let likes = [...onePhone.likes, like];
+      updateLikes(params.id, likes);
+    }
   }
   function deleteComment(id) {
     let newComments = onePhone.comments.filter((item) => {
@@ -128,6 +153,24 @@ const Details = () => {
               }}
             ></button>
           </div>
+          <div>
+            {currentUser ? (
+              <>
+                <LikeOutlined
+                  onClick={() => saveLikes()}
+                  style={{ fontSize: "30px" }}
+                />
+                <span>{onePhone.likes.length}</span>{" "}
+              </>
+            ) : (
+              <Link to="/auth">
+                <LikeOutlined
+                  onClick={() => saveLikes()}
+                  style={{ fontSize: "30px" }}
+                />
+              </Link>
+            )}
+          </div>
           <button
             style={{
               backgroundColor: "blue",
@@ -202,28 +245,37 @@ const Details = () => {
           <>
             <Modal
               footer={null}
-              title="Edit a comment"
+              title="Add a comment"
               visible={isModalVisible}
               onOk={handleOk}
               onCancel={handleCancel}
             >
-              <Form layout="vertical" name="basic" onFinish={save}>
-                <Form.Item
-                  label="comment"
-                  name="comment"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your comment!",
-                    },
-                  ]}
+              <Input
+                type="text"
+                name="comment"
+                value={createComment.comment}
+                onChange={(e) =>
+                  setCreateComment({
+                    ...createComment,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+              />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "10px",
+                }}
+              >
+                <Button
+                  onClick={() => save(createComment)}
+                  type="primary"
+                  htmlType="submit"
                 >
-                  <Input />
-                </Form.Item>
-                <Button type="primary" htmlType="submit">
                   Save
                 </Button>
-              </Form>
+              </div>
             </Modal>
           </>
         </div>
