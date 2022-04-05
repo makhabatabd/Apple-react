@@ -5,7 +5,6 @@ import PhonesContextProvider from "./componentsM/contexts/phoneContext";
 import CartContextProvider from "./componentsM/contexts/cartContext";
 import FavoriteContextProvider from "./componentsM/contexts/favoriteContext";
 import AuthContextProvider from "./componentsM/contexts/authContext";
-import { useState } from "react";
 
 function App() {
   return (

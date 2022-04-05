@@ -77,6 +77,10 @@ const PhonesContextProvider = ({ children }) => {
     await axios.patch(`${API}/${id}`, editedProduct);
     getPhones();
   }
+  async function updateComments(id, comments) {
+    await axios.patch(`${API}/${id}`, { comments: comments });
+    getOnePhone(id);
+  }
   return (
     <phonesContext.Provider
       value={{
@@ -91,6 +95,7 @@ const PhonesContextProvider = ({ children }) => {
         updatePhone,
         getModels,
         addOrder,
+        updateComments,
       }}
     >
       {children}

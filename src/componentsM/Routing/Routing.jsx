@@ -12,7 +12,6 @@ import IphoneList from "../IphoneList/IphoneList";
 import Cart from "../Cart/Cart";
 import Favorite from "../../Favorite/Favorite";
 import Auth from "../Auth/Auth";
-import StripeContainer from "../Payment/StripeContainer";
 import Payment from "../Payment/Payment";
 import PaymentFinish from "../PaymentFinish/PaymentFinish";
 
@@ -58,6 +57,11 @@ const Routing = () => {
       element: <PaymentFinish />,
       id: 7,
     },
+    {
+      link: "/details/:id",
+      element: <Details />,
+      id: 9,
+    },
   ];
   let ADMIN_ROUTES = [
     {
@@ -69,11 +73,6 @@ const Routing = () => {
       link: "/edit/:id",
       element: <EditPhone />,
       id: 2,
-    },
-    {
-      link: "/details/:id",
-      element: <Details />,
-      id: 3,
     },
   ];
   return (
