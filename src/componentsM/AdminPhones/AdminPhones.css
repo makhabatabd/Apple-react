@@ -3,3 +3,34 @@
   display: flex;
   justify-content: space-between;
 }
+
+.admin-phones-buttons {
+  margin-right: "40px";
+}
+
+@media screen and (max-width: 750px) {
+  .admin-phones-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .admin-phones-edit {
+    margin-top: 20px;
+  }
+
+  .admin-phones-buttons {
+    margin-top: 20px;
+  }
+
+  .admin-phones-description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .admin-phones-description {
+    display: none;
+  }
+}

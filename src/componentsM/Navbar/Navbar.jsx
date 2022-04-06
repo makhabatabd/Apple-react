@@ -93,17 +93,19 @@ const Navbar = () => {
       </div>
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         {currentUser ? (
-          <span>
+          <span style={{ marginRight: "8px" }}>
             {currentUser}
-            <Button
-              style={{ marginLeft: "8px", marginBottom: "10px" }}
-              onClick={handleLogOut}
-            >
+            <Button style={{ marginLeft: "5px" }} onClick={handleLogOut}>
               Logout
             </Button>
           </span>
         ) : (
-          <Button onClick={() => navigate("/auth")}>Log in/ Sign up</Button>
+          <Button
+            style={{ marginRight: "8px" }}
+            onClick={() => navigate("/auth")}
+          >
+            Log in/ Sign up
+          </Button>
         )}
       </div>
     </>

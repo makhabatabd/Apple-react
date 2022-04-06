@@ -276,4 +276,8 @@
   .apple-block a:after {
     content: none;
   }
+
+  .apple-links a {
+    margin-left: 0;
+  }
 }

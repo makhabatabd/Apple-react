@@ -5,12 +5,13 @@
 .edit-container-inner {
   background-image: url("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=90&.v=1567022175704");
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 50%;
   background-position: right;
+  padding-bottom: 60px;
 }
 
 .edit-form {
-  width: 30vw;
+  width: 40vw;
   margin-left: 20px;
 }
 
@@ -21,8 +22,12 @@
   font-weight: 700;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 970px) {
   .edit-container-inner {
     background-image: none;
+  }
+
+  .edit-form {
+    width: 85vw;
   }
 }

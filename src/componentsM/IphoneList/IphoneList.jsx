@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { phonesContext } from "../contexts/phoneContext";
 import Filters from "../Filters/Filters";
 import IphoneCard from "./IphoneCard";
+import "./IphoneList.css";
 
 const IphoneList = () => {
   const { getPhones, phones, phonesCount } = useContext(phonesContext);
@@ -38,14 +39,14 @@ const IphoneList = () => {
     <div className="container" style={{ marginBottom: "40px" }}>
       <div className="products-search">
         <div
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", marginLeft: "7px" }}
           onClick={() => setShowFilters(!showFilters)}
         >
           {showFilters ? "HIDE FILTERS" : "SHOW FILTERS"}
         </div>
         <Input.Search
+          className="iphone-list-search"
           placeholder="Search..."
-          style={{ width: "25vw" }}
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         />

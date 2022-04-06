@@ -1,0 +1,16 @@
+.iphone-list-search {
+  width: 28%;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 780px) {
+  .iphone-list-search {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .iphone-list-search {
+    width: 50%;
+  }
+}
