@@ -5,8 +5,9 @@ import { phonesContext } from "../contexts/phoneContext";
 const AddPhone = () => {
   const { addPhone } = useContext(phonesContext);
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [form] = Form.useForm();
   function save(newProduct) {
-    addPhone(newProduct);
+    addPhone({ ...newProduct, comments: [], likes: [] });
     setIsModalVisible(false);
   }
 
@@ -33,7 +34,12 @@ const AddPhone = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <Form layout="vertical" name="basic" onFinish={save}>
+        <Form
+          initialValues={{ remember: false }}
+          layout="vertical"
+          name="basic"
+          onFinish={save}
+        >
           <Form.Item
             label="Model"
             name="model"

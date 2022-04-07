@@ -27,6 +27,20 @@
   margin-left: 80px;
 }
 
+.badge {
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 1085px) {
+  .navbar-active {
+    margin: 0 35px;
+  }
+
+  .navbar-item {
+    margin: 0 35px;
+  }
+}
+
 @media screen and (max-width: 930px) {
   .navbar-item {
     margin: 0 20px;
@@ -37,6 +51,7 @@
   }
   .shopping {
     margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -62,6 +77,12 @@
   .navbar {
     display: flex;
     flex-direction: column;
+  }
+  .shopping {
+    margin-bottom: 10px;
+  }
+  .navbar-item {
+    margin-bottom: 20px;
   }
 }
 

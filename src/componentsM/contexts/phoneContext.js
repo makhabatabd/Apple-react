@@ -10,6 +10,7 @@ const INIT_STATE = {
 };
 
 const API = "http://localhost:8000/products";
+const API_ORDERS = "http://localhost:8000/order";
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -55,6 +56,11 @@ const PhonesContextProvider = ({ children }) => {
     await axios.post(API, newProduct);
     getPhones();
   }
+
+  async function addOrder(newOrder) {
+    await axios.post(API_ORDERS, newOrder);
+  }
+
   async function deletePhone(id) {
     await axios.delete(`${API}/${id}`);
     getPhones();
@@ -71,6 +77,15 @@ const PhonesContextProvider = ({ children }) => {
     await axios.patch(`${API}/${id}`, editedProduct);
     getPhones();
   }
+  async function updateComments(id, comments) {
+    await axios.patch(`${API}/${id}`, { comments: comments });
+    getOnePhone(id);
+  }
+
+  async function updateLikes(id, likes) {
+    await axios.patch(`${API}/${id}`, { likes: likes });
+    getOnePhone(id);
+  }
   return (
     <phonesContext.Provider
       value={{
@@ -84,6 +99,9 @@ const PhonesContextProvider = ({ children }) => {
         getOnePhone,
         updatePhone,
         getModels,
+        addOrder,
+        updateComments,
+        updateLikes,
       }}
     >
       {children}

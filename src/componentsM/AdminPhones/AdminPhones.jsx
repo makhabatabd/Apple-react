@@ -14,16 +14,15 @@ const AdminPhones = () => {
     <List>
       <VirtualList data={phones} itemHeight={47} itemKey="email">
         {(item) => (
-          <List.Item key={item.id}>
+          <List.Item key={item.id} className="admin-phones-list">
             <img src={item.imageWhite} alt="11" width="20%" />
             <span style={{ width: "50%", margin: "0 auto", fontSize: "20px" }}>
               {item.model}
-              <br />
-              {item.description}
+              <div className="admin-phones-description">{item.description}</div>
             </span>
-            <div style={{ marginRight: "40px", fontSize: "20px" }}>
+            <div className="admin-phones-buttons" style={{ fontSize: "20px" }}>
               <span onClick={() => deletePhone(item.id)}>Delete</span>
-              <Link to={`/edit/${item.id}`} style={{ margin: "auto 20px" }}>
+              <Link to={`/edit/${item.id}`} style={{ margin: "auto 30px" }}>
                 Edit
               </Link>
             </div>

@@ -32,7 +32,7 @@ const EditPhone = () => {
           onFinish={save}
         >
           <Form.Item
-            className="edit-product-name"
+            className="edit-product-names"
             label="Model"
             name="model"
             rules={[
@@ -66,7 +66,7 @@ const EditPhone = () => {
               },
             ]}
           >
-            <InputNumber min={1} />
+            <InputNumber min={1} style={{ width: "100%" }} />
           </Form.Item>
           <Form.Item
             label="Image White"

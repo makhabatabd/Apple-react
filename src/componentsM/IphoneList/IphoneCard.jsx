@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 import { cartContext } from "../contexts/cartContext";
 import { favoriteContext } from "../contexts/favoriteContext";
+import { authContext } from "../contexts/authContext";
 
 const { Meta } = Card;
 
