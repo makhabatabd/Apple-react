@@ -4,7 +4,7 @@ import { phonesContext } from "../contexts/phoneContext";
 import Loading from "../Loading/Loading";
 import { Button, Input, Modal } from "antd";
 import { List, Avatar } from "antd";
-import { authContext } from "../contexts/authContext";
+import { ADMIN_EMAIL, authContext } from "../contexts/authContext";
 import { LikeOutlined } from "@ant-design/icons";
 import "./Details.css";
 const Details = () => {
@@ -224,12 +224,14 @@ const Details = () => {
                     title={<a href="https://ant.design">{item.name}</a>}
                     description={item.comment}
                   />
-                  <button
-                    style={{ marginRight: "20px" }}
-                    onClick={() => deleteComment(item.id)}
-                  >
-                    Delete
-                  </button>
+                  {currentUser === ADMIN_EMAIL ? (
+                    <button
+                      style={{ marginRight: "20px" }}
+                      onClick={() => deleteComment(item.id)}
+                    >
+                      Delete
+                    </button>
+                  ) : null}
                 </List.Item>
               )}
             />

@@ -14,6 +14,8 @@ import Favorite from "../../Favorite/Favorite";
 import Auth from "../Auth/Auth";
 import Payment from "../Payment/Payment";
 import PaymentFinish from "../PaymentFinish/PaymentFinish";
+import Watch from "../Watch/Watch";
+import AirPods from "../AirPods/AirPods";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -61,6 +63,16 @@ const Routing = () => {
       link: "/details/:id",
       element: <Details />,
       id: 9,
+    },
+    {
+      link: "/watch",
+      element: <Watch />,
+      id: 10,
+    },
+    {
+      link: "/airpods",
+      element: <AirPods />,
+      id: 10,
     },
   ];
   let ADMIN_ROUTES = [

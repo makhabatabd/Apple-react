@@ -38,7 +38,6 @@ const AddPhone = () => {
           initialValues={{ remember: false }}
           layout="vertical"
           name="basic"
-          form={form}
           onFinish={save}
         >
           <Form.Item
