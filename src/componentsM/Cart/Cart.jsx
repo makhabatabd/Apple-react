@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { cartContext } from "../contexts/cartContext";
 import { Button, InputNumber, List } from "antd";
+import "./Cart.css";
 
 const Cart = () => {
   const { getCart, cart, deleteFromCart, changeProductCount } =
@@ -13,20 +14,20 @@ const Cart = () => {
       <List
         itemLayout="horizontal"
         dataSource={cart.products}
-        footer={<h2>{cart.totalPrice}</h2>}
+        footer={<h2>{"Total:" + cart.totalPrice + "$"}</h2>}
         renderItem={(item) => (
           <List.Item
-            extra={<img src={item.item.imageWhite} alt="img" width={272} />}
+            extra={
+              <img
+                className="cart-image"
+                src={item.item.imageWhite}
+                alt="img"
+              />
+            }
           >
             <List.Item.Meta
               title={
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
+                <div className="cart-details">
                   <div>
                     <h3>{item.item.model}</h3>
                   </div>
@@ -35,15 +36,13 @@ const Cart = () => {
               }
               description={
                 <>
-                  <div>{item.item.description}</div>
                   <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      width: "40%",
-                      marginTop: "20px",
-                    }}
+                    className="cart-description"
+                    style={{ marginLeft: "10px" }}
                   >
+                    {item.item.description}
+                  </div>
+                  <div className="details-extra-info">
                     <div>
                       <h4>Quantity</h4>
                       <Button
@@ -53,7 +52,11 @@ const Cart = () => {
                       >
                         -
                       </Button>
-                      <InputNumber disabled value={item.count} />
+                      <InputNumber
+                        style={{ width: "30%" }}
+                        disabled
+                        value={item.count}
+                      />
                       <Button
                         onClick={() =>
                           changeProductCount(item.count + 1, item.item.id)
@@ -67,13 +70,7 @@ const Cart = () => {
                       <h3>{"$" + item.subPrice}</h3>
                     </div>
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "flex-start",
-                      marginTop: "10px",
-                    }}
-                  >
+                  <div className="remove-button">
                     <Button onClick={() => deleteFromCart(item.item.id)}>
                       Remove from Cart
                     </Button>

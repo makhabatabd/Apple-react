@@ -1,0 +1,13 @@
+.favorite-context {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 780px) {
+  .favorite-context {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
